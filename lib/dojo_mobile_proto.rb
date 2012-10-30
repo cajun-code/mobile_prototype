@@ -1,7 +1,7 @@
-
-#require "dojo_mobile_proto/version"
+require "dojo_mobile_proto/version"
 require "thor"
 require "thor/group"
+require "fileutils"
 
 module DojoMobileProto
   class Prototype < Thor::Group
@@ -18,6 +18,7 @@ module DojoMobileProto
     
     def create_proto_ruby
       template('templates/proto.tt', "#{name}/#{name}.rb")
+      FileUtils.chmod("+x","#{name}/#{name}.rb" )
     end
     
     def create_basic_view
@@ -26,9 +27,10 @@ module DojoMobileProto
     
     def message
       say "You are now ready to run the prototype."
-      say "Change into the directory 'cd #{name}'"
-      say "Run 'bundle install'"
-      say "Run 'ruby #{name}.rb'"
+      say "\tChange into the directory 'cd #{name}'"
+      say "\tRun 'bundle install'"
+      say "\tRun '#{name}.rb'"
       say "Now go and build you prototype in views/index.erb"
+    end
   end
 end

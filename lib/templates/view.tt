@@ -4,7 +4,7 @@
     <meta name="viewport"
             content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title><%= name.capitalize %></title>
+    <title><%= name %></title>
  
     <!-- stylesheet will go here -->
  
@@ -35,5 +35,5 @@
 <div id="home" data-dojo-type="dojox.mobile.View" data-dojo-props="selected: true">
  
     <!-- a sample heading -->
-    <h1 data-dojo-type="dojox.mobile.Heading"><%= name.capitalize %></h1>
+    <h1 data-dojo-type="dojox.mobile.Heading"><%= name %></h1>
 </div>
