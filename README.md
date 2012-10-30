@@ -1,16 +1,8 @@
 # DojoMobileProto
 
-TODO: Write a gem description
-
+Project generator to kickstart a mobile prototype application with dojo
+See: http://www.dojotoolkit.org for more information about dojo.
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'dojo_mobile_proto'
-
-And then execute:
-
-    $ bundle
 
 Or install it yourself as:
 
@@ -18,7 +10,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ dojo_prototype NAME 
+
+Name should be the name of the prototype application you wish to create.
 
 ## Contributing
 
