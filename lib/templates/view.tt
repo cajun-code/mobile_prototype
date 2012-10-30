@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport"
+            content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title><%= name.capitalize %></title>
+ 
+    <!-- stylesheet will go here -->
+ 
+    <!-- dojo/javascript will go here -->
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.8.0/dojo/dojo.js"
+    data-dojo-config="async:true"></script>
+    <script >
+          // Load the widget parser and mobile base
+      require(["dojox/mobile/parser", 
+               "dojox/mobile/deviceTheme",
+               "dojox/mobile/compat",
+               "dojox/mobile/Button",
+               "dojox/mobile/TextBox",
+               "dojox/mobile"],
+          function(parser, deviceTheme) {
+       
+              // Parse the page for widgets!
+              parser.parse();
+       
+          }
+      );
+    </script>
+    </head>
+    <body>
+ 
+    <!-- application will go here -->
+      <!-- the view or "page"; select it as the "home" screen -->
+<div id="home" data-dojo-type="dojox.mobile.View" data-dojo-props="selected: true">
+ 
+    <!-- a sample heading -->
+    <h1 data-dojo-type="dojox.mobile.Heading"><%= name.capitalize %></h1>
+</div>
